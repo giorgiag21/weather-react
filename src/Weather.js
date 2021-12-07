@@ -89,7 +89,7 @@ export default function Weather() {
         </div>
       </div>
       <footer>
-        <a href="https://github.com/giorgiagit21/weather-app">
+        <a href="https://github.com/giorgiag21/weather-react">
           Open-source code{" "}
         </a>
         by
