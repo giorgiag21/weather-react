@@ -6,7 +6,7 @@ import Weather from "./Weather";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Weather />
+    <Weather defaultCity="Milan" />
   </React.StrictMode>,
   document.getElementById("root")
 );
