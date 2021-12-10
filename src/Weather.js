@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleSubmit(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -47,62 +46,7 @@ export default function Weather(props) {
               </div>
             </form>
             <br />
-            <h1 className="current-city">
-              {weatherData.city}, {weatherData.country}
-            </h1>
-            <div className="last-update">
-              <h6>
-                Last updated: <FormattedDate date={weatherData.date} />{" "}
-              </h6>
-            </div>
-            <br />
-            <div className="row">
-              <div className="col-6 left-column">
-                <h6 className="text-capitalize">{weatherData.description}</h6>
-
-                <div>
-                  <h6>Humidity: {weatherData.humidity}%</h6>
-                </div>
-
-                <div>
-                  <h6>Wind: {weatherData.wind}km/h</h6>
-                </div>
-              </div>
-
-              <div className="col-6 right-column">
-                <div className="current-weather">
-                  <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                    alt=""
-                    className="icon"
-                  />
-                  <span className="current-temp">
-                    {Math.round(weatherData.temperature)}
-                  </span>
-                  <span className="units">
-                    <a href="/" className="active">
-                      °C
-                    </a>{" "}
-                    |<a href="/">°F</a>
-                  </span>
-                  <br />
-
-                  <div className="current-max-min">
-                    <span className="current-max-temp">
-                      {Math.round(weatherData.maxTemperature)}
-                    </span>
-                    °{" "}
-                    <span className="current-min-temp">
-                      {Math.round(weatherData.minTemperature)}
-                    </span>
-                    °
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <br />
-            <div className="weather-forecast"></div>
+            <WeatherInfo data={weatherData} />
           </div>
         </div>
         <footer>
