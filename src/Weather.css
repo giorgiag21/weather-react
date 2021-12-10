@@ -13,10 +13,10 @@ button {
   font-size: 18px;
 }
 
-img {
+canvas {
   float: left;
   position: relative;
-  top: -15px;
+  top: -4px;
 }
 
 a {
@@ -61,7 +61,7 @@ a {
 .units {
   font-size: 18px;
   position: relative;
-  top: -25px;
+  top: -22px;
 }
 
 .active {
@@ -96,9 +96,4 @@ a {
 
 .day h6 {
   color: black;
-}
-
-.weather-icon img {
-  float: none;
-  top: 0;
 }
