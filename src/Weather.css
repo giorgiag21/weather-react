@@ -37,13 +37,14 @@ a {
 
 .current-city,
 .country,
-.current-temp {
+.current-temp,
+.forecast-day {
   color: #142d4c;
   font-weight: bold;
 }
 
 .current-max-temp,
-.day h6,
+.forecast-day,
 .max-temp {
   font-weight: bold;
 }
@@ -84,12 +85,4 @@ a {
 .weather-description,
 .current-city {
   text-transform: capitalize;
-}
-
-.col {
-  text-align: center;
-}
-
-.day h6 {
-  color: black;
 }
