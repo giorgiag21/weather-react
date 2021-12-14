@@ -13,26 +13,21 @@ button {
   font-size: 18px;
 }
 
-.current-weather canvas {
-  float: left;
-  position: relative;
-  top: -4px;
+.current-weather-icon {
+  text-align: center;
 }
 
 a {
   text-decoration: none;
 }
 
-.search-button {
-  position: relative;
-  left: -7px;
-  bottom: -7px;
+.search-city-form .col-2 {
+  padding: 0;
 }
 
+.search-button,
 .current-position-button {
-  position: relative;
-  left: 5px;
-  bottom: -7px;
+  margin: 5px 8px;
 }
 
 .current-city,
@@ -71,7 +66,7 @@ a {
   font-weight: bold;
 }
 
-.right-column {
+.col .right-column {
   text-align: right;
 }
 
@@ -87,6 +82,35 @@ a {
   text-transform: capitalize;
 }
 
-.col {
+.WeatherForecast .col {
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .search-city-form .col-2 {
+    padding: 0;
+  }
+
+  .search-button {
+    margin: 5px 3px 5px 0;
+  }
+
+  .current-position-button {
+    margin: 5px 3px;
+  }
+  .WeatherInfo .row {
+    display: grid;
+    grid-template-columns: 0.8fr 0.3fr 1fr;
+  }
+
+  .center-column,
+  .right-column {
+    text-align: center;
+  }
+
+  .WeatherForecast .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
 }
